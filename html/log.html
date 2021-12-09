@@ -1,0 +1,41 @@
+{% extends 'header.html' %} {% block conteudo %}
+<ul>
+
+    <head>
+        <h1>HISTÓRICO ATUAL DE OPERAÇÕES</h1>
+    </head>
+
+    <table align="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data da Operação</th>
+                <th>Tipo de Operação</th>
+                <th>Operação Específica</th>
+                <th>Argumentos</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for op in operacoes %}
+            <tr>
+                <td>{{ op.id }}</td>
+                <td>{{ op.data_operacao }}</td>
+                <td>{{ op.tipo_operacao }}</td>
+                <td>{{ op.operacao }}</td>
+                <td>{{ op.argumentos }}</td>
+                <td>{{ op.resultado }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+    <div class='btn btn-dark'>
+        <a href="{{url_for('calculadora') }}">RETORNAR</a>
+    </div>
+    
+</ul>
+
+{% endblock conteudo %}

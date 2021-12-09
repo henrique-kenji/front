@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RESULTADO</title>
+</head>
+
+<body>
+    <div style="text-align: center;">{% extends 'header.html' %} {% block conteudo %}
+        <div>
+            <div class="col-md-4" style="width:800px; margin:0 auto;">
+                <h1>O RESULTADO É:</h1>
+                <div class="form-group">
+                    <label class="control-label col-xs-4" for="resultado"></label>
+                    <div>
+                        <input type="text" name="resultado" placeholder={{ entry }}>
+                    </div>
+                    <div class="btn btn-success; margin:0 auto;">
+                        <a href="{{ url_for( 'calculadora') }} "><b style="color: rgb(12, 82, 235); ">RETORNAR<b></a>
+                    </div>
+                </div>
+            </div>
+            {% endblock conteudo %}
+        </div>
+</body>
+
+</html>
